@@ -1,18 +1,36 @@
 .header {
-    background: #fff;
+    border-bottom: 1px solid #8b79698d;
 }
-
 .header__inner {
     margin: 0 auto;
     padding: 20px 15px;
     max-width: 1230px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 .header__logo {
-    color: #cbaf99;
+    color: #947b62;
     text-decoration: none;
-    font: times;
+    font-family: serif;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 40px;
+    text-align: center;
+    flex: 1;
+}
+
+nav {
+    position: absolute;
+    right: 15px;
+}
+
+.logout__button-submit{
+    background: none;
+    border: 1px solid #8b7969;
+    color: #8b7969;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-size: 14px;
 }

@@ -21,8 +21,11 @@ Route::post('/thanks', [ContactController::class, 'store']);
 Route::get('/thanks', function () {
     return view('thanks');
 });
-Route::get('/auth/register', [ContactController::class, 'register']);
-Route::get('/', [AuthController::class, 'index']);
+
+Route::get('/auth/register', [AuthController::class, 'register']);
+Route::get('/auth/login', [AuthController::class, 'login']);
+
 Route::middleware('auth')->group(function () {
-    Route::get('/', [AuthController::class, 'index']);
+    Route::get('/admin', [AuthController::class, 'admin']);
 });
+Route::get('/admin/export', [AuthController::class, 'export'])->middleware('auth');

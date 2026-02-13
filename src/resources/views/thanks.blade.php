@@ -10,16 +10,15 @@
 </head>
 
 <body>
-    <div class="thanks-container">
+    <div class="thanks__container">
+
         <div class="background__text">
-            <p>Thank you</p>
+            <h2>Thank you</h2>
         </div>
-        <div class="thanks-content">
-            <h2 class="thanks-message">お問い合わせありがとうございました</h2>
+        <div class="thanks__message">
+            <p class="thanks__message-text">お問い合わせありがとうございました</p>
+            <a href="/" class="return__home">HOME</a>
         </div>
-        <form class="form"action="/" method="get">
-            <button class="return__home">HOME</button>
-        </form>
     </div>
 </body>
 

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>FashionablyLate</title>
     <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}">
     <link rel="stylesheet" href="{{ asset('css/common.css') }}">
@@ -17,22 +18,28 @@
             <a class="header__logo" href="/">
                 FashionablyLate
             </a>
+            <nav>
+                <ul class="header-nav">
+                    @if(Auth::check() && Request::is('admin*'))
+                    <li class="logout__button">
+                        <form action="/logout" method="POST" class="inline">
+                            @csrf
+                            <button type="submit" class="logout__button-submit">
+                                logout
+                            </button>
+                        </form>
+                    </li>
+                    @else
+                    @if (Request::is('register'))
+                    <li><a href="/login" class="login">login</a></li>
+                    @elseif (Request::is('login'))
+                    <li><a href="/register" class="register">register</a></li>
+                    @endif
+                    @endauth
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul class="header-nav">
-                @if (Auth::check())
-                <li class="header-nav__item">
-                    <a class="header-nav__link" href="/mypage">マイページ</a>
-                </li>
-                <li class="header-nav__item">
-                    <form action="/logout" method="post">
-                        @csrf
-                        <button class="header-nav__button">ログアウト</button>
-                    </form>
-                </li>
-                @endif
-            </ul>
-        </nav>
+
     </header>
 
     <main>

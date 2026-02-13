@@ -1,41 +1,48 @@
 .confirm__content {
-    max-width: 1230px;
-    margin: 0 auto;
-    padding: 30px 15px;
-}
+    background: #fff;
+    max-width: 1000px;
+    margin: 50px auto;
+    }
 
-.confirm__heading {
-    color: #cbaf99;
+    .confirm__heading {
+    color: #947b62;
     text-align: center;
-    font-size: 24px;
-    margin-bottom: 40px;
+    font-family: serif;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .form {
-    margin: 0 auto;
-    width: 70%;
+    width: 100%;
+    margin: 30px auto;
+    font-size: 18px;
+    color: #947b62;
 }
 .confirm-table {
-    border: 1px solid #cbaf99;
+    border: 1px solid #947b62bd;
+    margin-bottom: 80px;
 }
 .confirm-table__inner {
     width: 100%;
 }
 .confirm-table__header {
     padding: 15px;
-    width: 30%;
-    font-weight: bold;
-    background-color: #cbaf99;
+    width: 40%;
+    background-color: #947b62bd;
     color: #fff;
 }
 .confirm-table__text {
-    padding: 15px;
+    padding: 20px;
 }
 .confirm-table__text input {
     width: 100%;
     outline: none;
     border: none;
 }
+.confirm-table__row {
+    border-bottom: 1px solid #947b62bd;
+}
+
 .form__button {
     margin-top: 30px;
     text-align: center;
@@ -46,7 +53,7 @@
     height: 50px;
     border: none;
     border-radius: 3px;
-    background: #cbaf99;
+    background: #947b62bd;
     color: #fff;
     cursor: pointer;
 }
@@ -57,6 +64,6 @@
     border: none;
     border-radius: 3px;
     background: #fff;
-    color: #c99367;
+    color: #947b62bd;
     cursor: pointer;
 }

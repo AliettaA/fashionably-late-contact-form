@@ -1,37 +1,82 @@
 .contact-form__content {
-    background: #fff;
-    max-width: 1230px;
     margin: 0 auto;
+    max-width: 1230px;
 }
 .contact-form__heading {
-    color: #cbaf99;
+    font-size: 30px;
+    font-family: serif;
+    font-weight: bold;
     text-align: center;
-    font-size: 24px;
+    color: #947b62;
+    margin: 20px;
 }
-
+.form {
+    margin: 0 auto;
+    width: 70%;
+    color: #947b62;
+}
 .form__group {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 10px 30px;
-}
-.form__group-title {
-    padding: 10px 30px;
-    font-size: 20px;
-    color: #c99367;;
+    margin-bottom: 25px;
 }
 
-.form__label--required {
-    color: red;
+.form__label {
+    width: 30%;
+    padding-top: 10px;
+    text-align: left;
 }
-.form__group-content {
-    width: 60%;
+.form__input--content {
+    width: 70%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }
-textarea {
-    width: 500px;
-    height: 100px;
+.label__item {
+    color: #947b62;
+    font-size: 18px;
+
+}
+.label__required {
+    color: red;
+    font-size: 16px;
+}
+.form__input--flex {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+.form__input--box {
+    flex: 1;
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 12px 15px;
+    border-radius: 4px;
+    display: flex;
+}
+.form__input--box input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+.form__input--box input,
+.form__input--box textarea,
+.form__input--box select {
+    width: 100%;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-family: inherit;
+}
+.form__input--box textarea {
+    min-height: 120px;
+    resize: vertical;
+    /* 縦方向のみリサイズ可能に */
+}
+.error__message {
+    color: red;
+    font-size: 14px;
 }
 .form__button {
     margin-top: 30px;
@@ -43,7 +88,6 @@ textarea {
     height: 50px;
     border: none;
     border-radius: 3px;
-    background: #c99367;
+    background: #947b62bd;
     color: #fff;
-    cursor: pointer;
 }
