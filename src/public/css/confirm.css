@@ -1,5 +1,5 @@
 :root {
-    --main-color: #b49a7f;
+    --main-color: #9a8672;
 }
 .confirm__content {
     background: #fff;
@@ -31,7 +31,7 @@
 .confirm-table__header {
     padding: 20px 30px;
     width: 30%;
-    background-color: var(--main-color);
+    background-color: #c1aa92;
     color: #fff;
     font-size: 16px;
     font-weight: 500;

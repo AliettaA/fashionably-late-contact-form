@@ -12,46 +12,46 @@
     <form class="form" action="/register" method="post" novalidate>
         @csrf
         <div class="form__group">
-            <div class="form__group-title">
+            <div class="form__group--title">
                 <span class="form__label--item">お名前</span>
             </div>
-            <div class="form__group-content">
+            <div class="form__group--content">
                 <div class="form__input--text">
                     <input type="text" name="name" value="{{ old('name') }}" />
                 </div>
                 <div class="form__error">
                     @error('name')
-                    {{ $message }}
+                    <p class="error__message">{{ $message }}</p>
                     @enderror
                 </div>
             </div>
         </div>
         <div class="form__group">
-            <div class="form__group-title">
+            <div class="form__group--title">
                 <span class="form__label--item">メールアドレス</span>
             </div>
-            <div class="form__group-content">
+            <div class="form__group--content">
                 <div class="form__input--text">
                     <input type="email" name="email" value="{{ old('email') }}" />
                 </div>
                 <div class="form__error">
                     @error('email')
-                    {{ $message }}
+                    <p class="error__message">{{ $message }}</p>
                     @enderror
                 </div>
             </div>
         </div>
         <div class="form__group">
-            <div class="form__group-title">
+            <div class="form__group--title">
                 <span class="form__label--item">パスワード</span>
             </div>
-            <div class="form__group-content">
+            <div class="form__group--content">
                 <div class="form__input--text">
                     <input type="password" name="password" />
                 </div>
                 <div class="form__error">
                     @error('password')
-                    {{ $message }}
+                    <p class="error__message">{{ $message }}</p>
                     @enderror
                 </div>
             </div>

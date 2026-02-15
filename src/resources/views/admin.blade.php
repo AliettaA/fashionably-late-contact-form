@@ -42,20 +42,20 @@
                     <button type="submit">検索</button>
                 </div>
                 <div class="search-form__reset">
-                    <a href="/reset">リセット</a>
+                    <a class="reset__button" href="/reset">リセット</a>
                 </div>
             </div>
         </form>
         <!-- pagination -->
         <div class="tool-bar">
             <div class="export__button">
-                <a href="{{ route('admin.export', request()->query()) }}" class="export__button-submit">
+                <a class="export__button-submit" href="{{ route('admin.export', request()->query()) }}">
                     エクスポート
                 </a>
             </div>
             <div class="pagination">
                 <div class="custom__pagination">
-                    {{ $contacts->appends(request()->query())->links() }}
+                    {{ $contacts->appends(request()->query())->links('pagination::bootstrap-4') }}
                 </div>
             </div>
         </div>

@@ -22,24 +22,23 @@
                 <ul class="header-nav">
                     @if(Auth::check() && Request::is('admin*'))
                     <li class="logout__button">
-                        <form action="/logout" method="POST" class="inline">
+                        <form class="inline" action="/logout" method="POST">
                             @csrf
-                            <button type="submit" class="logout__button-submit">
+                            <button class="logout__button-submit" type="submit">
                                 logout
                             </button>
                         </form>
                     </li>
                     @else
                     @if (Request::is('register'))
-                    <li><a href="/login" class="login">login</a></li>
+                    <li><a class="login" href="/login">login</a></li>
                     @elseif (Request::is('login'))
-                    <li><a href="/register" class="register">register</a></li>
+                    <li><a class="register" href="/register">register</a></li>
                     @endif
-                    @endauth
+                    @endif
                 </ul>
             </nav>
         </div>
-
     </header>
 
     <main>
