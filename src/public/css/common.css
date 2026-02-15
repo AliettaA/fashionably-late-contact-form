@@ -1,3 +1,7 @@
+:root {
+    --main-color: #b49a7f;
+    --error-color: #e94040;
+}
 .header {
     border-bottom: 1px solid #8b79698d;
 }

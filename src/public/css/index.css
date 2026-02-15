@@ -1,3 +1,7 @@
+:root {
+    --main-color: #b49a7f;
+    --error-color: #e94040;
+}
 .contact-form__content {
     margin: 0 auto;
     max-width: 1230px;
@@ -7,39 +11,39 @@
     font-family: serif;
     font-weight: bold;
     text-align: center;
-    color: #947b62;
-    margin: 20px;
+    color: var(--main-color);
+    margin: 15px;
 }
 .form {
     margin: 0 auto;
-    width: 70%;
-    color: #947b62;
+    width: 80%;
+    color: var(--main-color);
 }
 .form__group {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .form__label {
-    width: 30%;
+    width: 25%;
     padding-top: 10px;
     text-align: left;
 }
 .form__input--content {
-    width: 70%;
+    width: 75%;
     display: flex;
     flex-direction: column;
 }
 .label__item {
-    color: #947b62;
+    color:var(--main-color);
     font-size: 18px;
 
 }
 .label__required {
-    color: red;
-    font-size: 16px;
+    color: var(--error-color);
+    font-size: 14px;
 }
 .form__input--flex {
     display: flex;
@@ -50,10 +54,57 @@
     flex: 1;
     width: 100%;
     background-color: #f2f2f2;
-    padding: 12px 15px;
+    padding: 10px 15px;
     border-radius: 4px;
     display: flex;
+    font-size: 16px;
+    color: var(--main-color);
 }
+label {
+    font-size: 16px;
+}
+.select-wrapper {
+    position: relative;
+    width: 50%;
+}
+.select-wrapper select {
+    width: 100%;
+    padding-right: 40px;
+}
+/* 自作の▼ボタン */
+.select-wrapper::after {
+    content: '';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #8b7969;
+    pointer-events: none;
+}
+/* セレクトボックスのみの調整 */
+.form__input--flex select {
+    width: 100%;
+    background-color: #f2f2f2;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    color: #999;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+/* セレクトボックス内の文字の調整 */
+.form__input--flex select option {
+    font-size: 14px;
+    background-color: #fff;
+}
+
 .form__input--box input {
     width: 100%;
     border: none;
@@ -72,12 +123,10 @@
 .form__input--box textarea {
     min-height: 120px;
     resize: vertical;
-    /* 縦方向のみリサイズ可能に */
 }
-
 .tel-hyphen {
     margin: 0 5px;
-    color: #947b62;
+    color: var(--main-color);
     line-height: 5;
     font-size: 12px;
 }
@@ -85,16 +134,25 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    gap: 20px;
 }
 
+.form__error {
+    min-height: 24px;
+    margin-top: 2px;
+    overflow: hidden;
+}
 .error__text {
-    color: red;
-    font-size: 14px;
-    margin-top: 5px;
+    color: var(--error-color);
+    font-size: 16px;
+    line-height: 1;
+    margin: 0;
 }
 
 .error__item {
     flex: 1;
+    min-height: 24px;
+    text-align: left;
 }
 
 .form__button {
@@ -107,6 +165,6 @@
     height: 50px;
     border: none;
     border-radius: 3px;
-    background: #947b62bd;
+    background: var(--main-color);
     color: #fff;
 }

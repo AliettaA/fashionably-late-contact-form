@@ -28,10 +28,10 @@
                         </div>
                     </div>
                     <div class="form__error--flex">
-                        <div class="error__message">
+                        <div class="error__item">
                             @error('last_name') <p class="error__text">{{ $message }}</p> @enderror
                         </div>
-                        <div class="error__message">
+                        <div class="error__item">
                             @error('first_name') <p class="error__text">{{ $message }}</p> @enderror
                         </div>
                     </div>
@@ -147,41 +147,43 @@
                 </div>
                 <div class="form__input--content">
                     <div class="form__input--flex">
-                        <select name="category_id" id="category_id" class="...">
-                            <option value="" selected disabled>選択してください</option>
-                            @foreach ($categories as $category)
-                            <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>
-                                {{ $category->content }}
-                            </option>
-                            @endforeach
-                        </select>
-                    </div>
-                    <div class="form__error">
-                        @error('category_id') <p class="error__text">{{ $message }}</p> @enderror
-                    </div>
-                </div>
-            </div>
-            <!-- お問い合わせ -->
-            <div class="form__group">
-                <div class="form__label">
-                    <span class="label__item">お問い合わせ内容</span>
-                    <span class="label__required">※</span>
-                </div>
-                <div class="form__input--content">
-                    <div class="form__input--box">
-                        <div class="form__input--flex">
-                            <textarea class="input__detail" name="detail" placeholder="お問い合わせ内容をご記載ください" value="{{ old('detail') }}"></textarea>
+                        <div class="select-wrapper">
+                            <select name="category_id" id="category_id" class="...">
+                                <option value="" selected disabled>選択してください</option>
+                                @foreach ($categories as $category)
+                                <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>
+                                    {{ $category->content }}
+                                </option>
+                                @endforeach
+                            </select>
                         </div>
                     </div>
-                    <div class="form__error">
-                        @error('detail') <p class="error__text">{{ $message }}</p> @enderror
+                        <div class="form__error">
+                            @error('category_id') <p class="error__text">{{ $message }}</p> @enderror
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- 確認ボタン -->
-            <div class="form__button">
-                <button class="form__button-submit" type="submit">確認画面</button>
-            </div>
+                <!-- お問い合わせ -->
+                <div class="form__group">
+                    <div class="form__label">
+                        <span class="label__item">お問い合わせ内容</span>
+                        <span class="label__required">※</span>
+                    </div>
+                    <div class="form__input--content">
+                        <div class="form__input--box">
+                            <div class="form__input--flex">
+                                <textarea class="input__detail" name="detail" placeholder="お問い合わせ内容をご記載ください">{{ old('detail') }}</textarea>
+                            </div>
+                        </div>
+                        <div class="form__error">
+                            @error('detail') <p class="error__text">{{ $message }}</p> @enderror
+                        </div>
+                    </div>
+                </div>
+                <!-- 確認ボタン -->
+                <div class="form__button">
+                    <button class="form__button-submit" type="submit">確認画面</button>
+                </div>
         </form>
     </div>
 </main>

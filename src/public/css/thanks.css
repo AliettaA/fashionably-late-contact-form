@@ -1,3 +1,7 @@
+:root {
+    --main-color: #b49a7f;
+}
+
 .thanks__container {
     position: relative;
     display: flex;
@@ -20,12 +24,12 @@
 }
 
 .background__text h2 {
-    font-size: 15vw;
-    font-weight: bold;
-    color: #947b6257;
-    opacity: 0.4;
+    font-size: 20vw;
+    font-weight: 900;
+    color: #947b6243;
+    opacity: 0.6;
     white-space: nowrap;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.05em;
     margin: 0;
     font-family: serif;
 }
@@ -38,13 +42,15 @@
 }
 
 .thanks__message-text {
-    font-size: 20px;
-    margin-bottom: 40px;
-    color: #947b62;
+    font-size: 24px;
+    margin-top: 130px;
+    margin-bottom: 60px;
+    font-weight: 500;
+    color: var(--main-color);
 }
 
 .return__home {
-    background: #cbaf99;
+    background: var(--main-color);
     color: #fff;
     padding: 12px 40px;
     border-radius: 2px;

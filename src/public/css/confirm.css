@@ -1,11 +1,14 @@
+:root {
+    --main-color: #b49a7f;
+}
 .confirm__content {
     background: #fff;
     max-width: 1000px;
     margin: 50px auto;
     }
 
-    .confirm__heading {
-    color: #947b62;
+.confirm__heading {
+    color: var(--main-color);
     text-align: center;
     font-family: serif;
     font-size: 30px;
@@ -14,22 +17,27 @@
 
 .form {
     width: 100%;
-    margin: 30px auto;
+    margin: 50px auto;
     font-size: 18px;
-    color: #947b62;
+    color:var(--main-color);
 }
 .confirm-table {
-    border: 1px solid #947b62bd;
+    border: 1px solid var(--main-color);
     margin-bottom: 80px;
 }
 .confirm-table__inner {
     width: 100%;
 }
 .confirm-table__header {
-    padding: 15px;
-    width: 40%;
-    background-color: #947b62bd;
+    padding: 20px 30px;
+    width: 30%;
+    background-color: var(--main-color);
     color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-align: left;
+    vertical-align: middle;
 }
 .confirm-table__text {
     padding: 20px;
@@ -40,30 +48,42 @@
     border: none;
 }
 .confirm-table__row {
-    border-bottom: 1px solid #947b62bd;
+    border-bottom: 1px solid var(--main-color);
 }
 
 .form__button {
     margin-top: 30px;
+    display: flex;
+    justify-content: center;
     text-align: center;
+    gap: 40px;
 }
 .form__button-submit {
     padding: 10px;
-    width: 30%;
+    width: 150px;
     height: 50px;
     border: none;
     border-radius: 3px;
-    background: #947b62bd;
+    background: var(--main-color);
     color: #fff;
     cursor: pointer;
+    transition: opacity 0.3s;
 }
 .form__button-fix {
     padding: 10px;
-    width: 30%;
+    width: 150px;
     height: 50px;
     border: none;
     border-radius: 3px;
-    background: #fff;
-    color: #947b62bd;
+    background: transparent;
+    color: var(--main-color);
     cursor: pointer;
+    text-decoration: underline;
+}
+.form__button-submit:hover,
+.form__button-fix:hover {
+    opacity: 0.7;
+}
+.confirm-table__row:last-child {
+    border-bottom: none;
 }
