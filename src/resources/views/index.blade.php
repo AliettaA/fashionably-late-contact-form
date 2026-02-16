@@ -10,7 +10,7 @@
         <div class="contact-form__heading">
             <h2>Contact</h2>
         </div>
-        <form class="form" action="/confirm" method="post" novalidate>
+        <form class="contact-form" action="/confirm" method="post" novalidate>
             @csrf
             <!-- 名前 -->
             <div class="form__group">
@@ -88,21 +88,23 @@
                             </div>
                             <span class="tel-hyphen">ー</span>
                             <div class="form__input--box">
-                                <input class="input__tel" type="text" name="tel2" placeholder="1234" value="{{ old('tel2', $contact['tel2'] ?? '') }}">
+                                <input class="input__tel" type="text" name="tel2" value="{{ old('tel2', $contact['tel2'] ?? '') }}" placeholder="1234">
                             </div>
                             <span class="tel-hyphen">ー</span>
                             <div class="form__input--box">
-                                <input class="input__tel" type="text" name="tel3" placeholder="5678" value="{{ old('tel3', $contact['tel3'] ?? '') }}">
+                                <input class="input__tel" type="text" name="tel3" value="{{ old('tel3', $contact['tel3'] ?? '') }}" placeholder="5678">
                             </div>
                         </div>
-                        <div class="form__error--flex">
-                            <div class="form__error">
+                        <div class="form__error--flex tel-error-group">
+                            <div class="error__item">
                                 @error('tel1') <p class="error__text">{{ $message }}</p> @enderror
                             </div>
-                            <div class="form__error">
+                            <div class="tel-hyphen-spacer"></div>
+                            <div class="error__item">
                                 @error('tel2') <p class="error__text">{{ $message }}</p> @enderror
                             </div>
-                            <div class="form__error">
+                            <div class="tel-hyphen-spacer"></div>
+                            <div class="error__item">
                                 @error('tel3') <p class="error__text">{{ $message }}</p> @enderror
                             </div>
                         </div>
@@ -118,7 +120,7 @@
                 <div class="form__input--content">
                     <div class="form__input--box">
                         <div class="form__input--flex">
-                            <input class="input__address" type="text" name="address" placeholder="例：東京都世田谷区千駄ヶ谷1-2-3" value="{{ old('address') }}" />
+                            <input class="input__address" type="text" name="address" value="{{ old('address') }}" placeholder="例：東京都世田谷区千駄ヶ谷1-2-3" />
                         </div>
                     </div>
                     <div class="form__error">
@@ -134,7 +136,7 @@
                 <div class="form__input--content">
                     <div class="form__input--box">
                         <div class="form__input--flex">
-                            <input class="input__building" type="text" name="building" placeholder="例：千駄ヶ谷マンション101" value="{{ old('building') }}" />
+                            <input class="input__building" type="text" name="building" value="{{ old('building') }}" placeholder="例：千駄ヶ谷マンション101" />
                         </div>
                     </div>
                 </div>
@@ -148,7 +150,7 @@
                 <div class="form__input--content">
                     <div class="form__input--flex">
                         <div class="select-wrapper">
-                            <select name="category_id" id="category_id" class="...">
+                            <select class="select__kinds" name="category_id" id="category_id">
                                 <option value="" selected disabled>選択してください</option>
                                 @foreach ($categories as $category)
                                 <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>
@@ -158,32 +160,32 @@
                             </select>
                         </div>
                     </div>
-                        <div class="form__error">
-                            @error('category_id') <p class="error__text">{{ $message }}</p> @enderror
-                        </div>
+                    <div class="form__error">
+                        @error('category_id') <p class="error__text">{{ $message }}</p> @enderror
                     </div>
                 </div>
-                <!-- お問い合わせ -->
-                <div class="form__group">
-                    <div class="form__label">
-                        <span class="label__item">お問い合わせ内容</span>
-                        <span class="label__required">※</span>
-                    </div>
-                    <div class="form__input--content">
-                        <div class="form__input--box">
-                            <div class="form__input--flex">
-                                <textarea class="input__detail" name="detail" placeholder="お問い合わせ内容をご記載ください">{{ old('detail') }}</textarea>
-                            </div>
-                        </div>
-                        <div class="form__error">
-                            @error('detail') <p class="error__text">{{ $message }}</p> @enderror
+            </div>
+            <!-- お問い合わせ内容 -->
+            <div class="form__group">
+                <div class="form__label">
+                    <span class="label__item">お問い合わせ内容</span>
+                    <span class="label__required">※</span>
+                </div>
+                <div class="form__input--content">
+                    <div class="form__input--box">
+                        <div class="form__input--flex">
+                            <textarea class="input__detail" name="detail" placeholder="お問い合わせ内容をご記載ください">{{ old('detail') }}</textarea>
                         </div>
                     </div>
+                    <div class="form__error">
+                        @error('detail') <p class="error__text">{{ $message }}</p> @enderror
+                    </div>
                 </div>
-                <!-- 確認ボタン -->
-                <div class="form__button">
-                    <button class="form__button-submit" type="submit">確認画面</button>
-                </div>
+            </div>
+            <!-- 確認ボタン -->
+            <div class="form__button">
+                <button class="form__button-submit" type="submit">確認画面</button>
+            </div>
         </form>
     </div>
 </main>

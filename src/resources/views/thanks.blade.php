@@ -13,7 +13,7 @@
     <div class="thanks__container">
 
         <div class="background__text">
-            <h2>Thank you</h2>
+            <h1>Thank you</h1>
         </div>
         <div class="thanks__message">
             <p class="thanks__message-text">お問い合わせありがとうございました</p>

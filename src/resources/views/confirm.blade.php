@@ -19,6 +19,7 @@
                         {{ $contact['last_name'] }}　{{ $contact['first_name'] }}
                         <input type="hidden" name="last_name" value="{{ $contact['last_name'] }}">
                         <input type="hidden" name="first_name" value="{{ $contact['first_name'] }}">
+                    </td>
                 </tr>
                 <tr class="confirm-table__row">
                     <th class="confirm-table__header">性別</th>
@@ -33,7 +34,7 @@
                 <tr class="confirm-table__row">
                     <th class="confirm-table__header">メールアドレス</th>
                     <td class="confirm-table__text">
-                        <input type="email" name="email" value="{{ $contact['email'] }}" readonly />
+                        {{ $contact['email'] }}
                         <input type="hidden" name="email" value="{{ $contact['email'] }}">
                     </td>
                 </tr>
@@ -49,15 +50,17 @@
                 <tr class="confirm-table__row">
                     <th class="confirm-table__header">住所</th>
                     <td class="confirm-table__text">
-                        <input type="text" name="address" value="{{ $contact['address'] }}" readonly />
+                        {{ $contact['address'] }}
                         <input type="hidden" name="address" value="{{ $contact['address'] }}">
                     </td>
                 </tr>
                 <tr class="confirm-table__row">
                     <th class="confirm-table__header">建物名</th>
                     <td class="confirm-table__text">
-                        <input type="text" name="building" value="{{ $contact['building'] }}" readonly />
+                    <td class="confirm-table__text">
+                        {{ $contact['building'] }}
                         <input type="hidden" name="building" value="{{ $contact['building'] }}">
+                    </td>
                     </td>
                 </tr>
                 <tr class="confirm-table__row">

@@ -46,13 +46,13 @@
                 </div>
             </div>
         </form>
-        <!-- pagination -->
         <div class="tool-bar">
             <div class="export__button">
                 <a class="export__button-submit" href="{{ route('admin.export', request()->query()) }}">
                     エクスポート
                 </a>
             </div>
+            <!-- pagination -->
             <div class="pagination">
                 <div class="custom__pagination">
                     {{ $contacts->appends(request()->query())->links('pagination::bootstrap-4') }}
@@ -62,15 +62,13 @@
         <!-- contact-table -->
         <div class="contact-table">
             <table class="contact-table__inner">
-                {{-- ヘッダー行：class指定を修正 --}}
                 <tr class="contact-table__title">
                     <th>お名前</th>
                     <th>性別</th>
                     <th>メールアドレス</th>
                     <th>お問い合わせの種類</th>
-                    <th></th> {{-- 詳細ボタン用の列を確保 --}}
+                    <th></th>
                 </tr>
-
                 @foreach ($contacts as $contact)
                 <tr class="contact-table__row">
                     <td>{{ $contact->last_name }} {{ $contact->first_name }}</td>
@@ -130,7 +128,6 @@
                 @endforeach
             </table>
         </div>
-    </div>
     </div>
 </main>
 <script>
