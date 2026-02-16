@@ -10,7 +10,7 @@
     max-width: 1230px;
     margin: 0 auto;
     padding: 20px 40px;
-    height: 80px;
+    height: 90px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -21,10 +21,10 @@
     left: 50%;
     transform: translateX(-50%);
     color: var(--main-color);
-    text-decoration: none;
-    font-family: serif;
-    font-weight: bold;
-    font-size: 34px;
+    font-family: "Gideon Roman", serif;
+    letter-spacing: 0.05em;
+    font-weight:900;
+    font-size: 38px;
 }
 .header-nav {
     display: flex;

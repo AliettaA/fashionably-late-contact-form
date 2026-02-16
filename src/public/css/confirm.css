@@ -8,9 +8,10 @@
     max-width: 1230px;
 }
 .confirm__heading {
-    font-size: 30px;
-    font-family: serif;
-    font-weight: bold;
+    font-size: 32px;
+    font-family: "Gideon Roman", serif;
+    font-weight: 900;
+    letter-spacing: 0.05em;
     text-align: center;
     color: var(--main-color);
     margin: 20px;
@@ -19,6 +20,7 @@
     width: 70%;
     margin: 50px auto;
     font-size: 18px;
+    font-family: sans-serif;
     color:var(--main-color);
 }
 .confirm-table {
@@ -42,6 +44,7 @@
 }
 .confirm-table__text {
     padding: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .confirm-table__text input {
     width: 100%;
@@ -49,7 +52,7 @@
     border: none;
     background: transparent;
     color: inherit;
-    font-family: inherit;
+    text-align: left;
 }
 .confirm-table__row {
     border-bottom: 1px solid #d4bea9;

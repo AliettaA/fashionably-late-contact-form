@@ -10,9 +10,10 @@
 }
 /* 共通ヘッダー */
 .contact-form__heading {
-    font-size: 30px;
-    font-family: serif;
-    font-weight: bold;
+    font-size: 32px;
+    font-family: "Gideon Roman", serif;
+    font-weight: 900;
+    letter-spacing: 0.05em;
     text-align: center;
     color: var(--main-color);
     margin: 20px;
@@ -54,6 +55,13 @@
     gap: 30px;
     align-items: center;
 }
+.form__input--box input::placeholder,
+.form__input--box textarea::placeholder {
+    color: #cbaf99;
+    font-size: 14px;
+    font-weight: 400;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
 .tel-hyphen {
     display: flex;
     align-items: center;
@@ -74,6 +82,7 @@
     padding: 10px 15px;
     display: flex;
     font-size: 16px;
+    color: var(--main-color);
 }
 .form__input--box input,
 .form__input--box textarea,

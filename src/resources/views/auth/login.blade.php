@@ -17,7 +17,7 @@
             </div>
             <div class="form__group--content">
                 <div class="form__input--text">
-                    <input type="email" name="email" value="{{ old('email') }}" required />
+                    <input type="email" name="email" value="{{ old('email') }}" placeholder="test@example.com" required />
                 </div>
                 <div class="form__error">
                     @error('email')
@@ -32,7 +32,7 @@
             </div>
             <div class="form__group--content">
                 <div class="form__input--text">
-                    <input type="password" name="password" required />
+                    <input type="password" name="password" placeholder="coachtech1106" />
                 </div>
                 <div class="form__error">
                     @error('password')

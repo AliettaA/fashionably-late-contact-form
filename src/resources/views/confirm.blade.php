@@ -57,7 +57,6 @@
                 <tr class="confirm-table__row">
                     <th class="confirm-table__header">建物名</th>
                     <td class="confirm-table__text">
-                    <td class="confirm-table__text">
                         {{ $contact['building'] }}
                         <input type="hidden" name="building" value="{{ $contact['building'] }}">
                     </td>
