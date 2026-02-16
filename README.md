@@ -38,4 +38,4 @@ PHPコンテナ内でライブラリをインストールします。
 
 ## ４. URL
 
-![ER図](./src/docs/FashionabltLate.png.png)
+![ER図](./src/docs/FashionabltLate.png)
