@@ -16,7 +16,7 @@
             <h1>Thank you</h1>
         </div>
         <div class="thanks__message">
-            <p class="thanks__message-text">お問い合わせありがとうございました</p>
+            <p class="thanks__message--text">お問い合わせありがとうございました</p>
             <a href="/" class="return__home">HOME</a>
         </div>
     </div>

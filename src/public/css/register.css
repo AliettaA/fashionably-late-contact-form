@@ -99,7 +99,7 @@
     width: 100%;
 }
 
-.form__button-submit {
+.form__button--submit {
     display: flex;
     justify-content: center;
     align-items: center;

@@ -22,7 +22,7 @@
                 FashionablyLate
             </a>
             <nav>
-                <ul class="header-nav">
+                <ul class="header__nav">
                     @if(Auth::check() && Request::is('admin*'))
                     <li class="logout__button">
                         <form class="inline" action="/logout" method="POST">

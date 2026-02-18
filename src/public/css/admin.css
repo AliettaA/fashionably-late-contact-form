@@ -121,7 +121,7 @@
     width: 150px;
     height: 38px;
 }
-.export__button-submit {
+.export__button--submit {
     width: 100%;
     height: 100%;
     display: flex;
@@ -190,28 +190,16 @@
     border-bottom: 1px solid #dcd8d4c8;;
     font-size: 15px;
 }
-.detail-button {
+.detail__button {
     background-color: #f1ece8;
     color: var(--main-color);
     padding: 5px 15px;
     border-radius: 4px;
     font-weight: bold;
 }
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-}
 
 /* モーダル */
-.modal-inner {
+.modal__inner {
     position: relative;
     background-color: #fff;
     width: 90%;
@@ -220,7 +208,7 @@
     border-radius: 2px;
     border: 1px solid var(--main-color);
 }
-.modal-table th {
+.modal__table th {
     text-align: left;
     width: 30%;
     padding: 15px 0;
@@ -228,16 +216,16 @@
     font-weight: bold;
     font-family: serif;
 }
-.modal-table td {
+.modal__table td {
     padding: 15px 0;
     color: #333;
 }
-.modal-table {
+.modal__table {
     width: 100%;
     margin-bottom: 30px;
     border-collapse: collapse;
 }
-.modal-close {
+.modal__close {
     position: absolute;
     top: 15px;
     right: 20px;
@@ -251,7 +239,19 @@
     font-size: 18px;
     line-height: 1;
 }
-.delete-button {
+.modal__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+.delete__button {
     display: block;
     margin: 0 auto;
     background-color: var(--error-color);
@@ -263,6 +263,6 @@
     font-size: 14px;
     transition: 0.3s;
 }
-.delete-button:hover {
+.delete__button:hover {
     opacity: 0.8;
 }

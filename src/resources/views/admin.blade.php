@@ -48,7 +48,7 @@
         </form>
         <div class="tool-bar">
             <div class="export__button">
-                <a class="export__button-submit" href="{{ route('admin.export', request()->query()) }}">
+                <a class="export__button--submit" href="{{ route('admin.export', request()->query()) }}">
                     エクスポート
                 </a>
             </div>
@@ -76,12 +76,12 @@
                     <td>{{ $contact->email }}</td>
                     <td>{{ $contact->category->content }}</td>
                     <td>
-                        <button class="detail-button" onclick="openModal('{{ $contact->id }}')">詳細</button>
-                        <div id="modal-{{ $contact->id }}" class="modal-overlay" style="display: none;">
-                            <div class="modal-inner">
-                                <button type="button" class="modal-close" onclick="closeModal('{{ $contact->id }}')">×</button>
-                                <div class="modal-content">
-                                    <table class="modal-table">
+                        <button class="detail__button" onclick="openModal('{{ $contact->id }}')">詳細</button>
+                        <div id="modal-{{ $contact->id }}" class="modal__overlay" style="display: none;">
+                            <div class="modal__inner">
+                                <button type="button" class="modal__close" onclick="closeModal('{{ $contact->id }}')">×</button>
+                                <div class="modal__content">
+                                    <table class="modal__table">
                                         <tr>
                                             <th>お名前</th>
                                             <td>{{ $contact->last_name }} {{ $contact->first_name }}</td>
@@ -115,10 +115,10 @@
                                             <td>{{ $contact->detail }}</td>
                                         </tr>
                                     </table>
-                                    <form class="delete-form" action="{{ route('admin.delete') }}" method="POST">
+                                    <form class="delete__form" action="{{ route('admin.delete') }}" method="POST">
                                         @csrf
                                         <input type="hidden" name="id" value="{{ $contact->id }}">
-                                        <button type="submit" class="delete-button">削除</button>
+                                        <button type="submit" class="delete__button">削除</button>
                                     </form>
                                 </div>
                             </div>

@@ -30,7 +30,7 @@
     font-size: 38px;
 }
 
-.header-nav {
+.header__nav {
     display: flex;
     align-items: center;
     list-style: none;
@@ -54,7 +54,7 @@
     line-height: 1;
 }
 
-.header-nav__link:hover {
+.header__nav__link:hover {
     background: #b49a7f;
     color: #fff;
 }

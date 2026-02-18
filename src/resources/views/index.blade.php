@@ -95,15 +95,15 @@
                                 <input class="input__tel" type="text" name="tel3" value="{{ old('tel3', $contact['tel3'] ?? '') }}" placeholder="5678">
                             </div>
                         </div>
-                        <div class="form__error--flex tel-error-group">
+                        <div class="form__error--flex tel__error--group">
                             <div class="error__item">
                                 @error('tel1') <p class="error__text">{{ $message }}</p> @enderror
                             </div>
-                            <div class="tel-hyphen-spacer"></div>
+                            <div class="tel-hyphen__spacer"></div>
                             <div class="error__item">
                                 @error('tel2') <p class="error__text">{{ $message }}</p> @enderror
                             </div>
-                            <div class="tel-hyphen-spacer"></div>
+                            <div class="tel-hyphen__spacer"></div>
                             <div class="error__item">
                                 @error('tel3') <p class="error__text">{{ $message }}</p> @enderror
                             </div>
@@ -184,7 +184,7 @@
             </div>
             <!-- 確認ボタン -->
             <div class="form__button">
-                <button class="form__button-submit" type="submit">確認画面</button>
+                <button class="form__button--submit" type="submit">確認画面</button>
             </div>
         </form>
     </div>

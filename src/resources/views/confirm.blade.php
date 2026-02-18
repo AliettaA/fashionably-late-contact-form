@@ -79,8 +79,8 @@
             </table>
         </div>
         <div class="form__button">
-            <button class="form__button-submit" type="submit">送信</button>
-            <button class="form__button-modify" type="button" onclick="history.back()">修正</button>
+            <button class="form__button--submit" type="submit">送信</button>
+            <button class="form__button--modify" type="button" onclick="history.back()">修正</button>
         </div>
     </form>
 </div>

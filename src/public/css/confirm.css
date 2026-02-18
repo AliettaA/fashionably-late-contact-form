@@ -65,7 +65,7 @@
     text-align: center;
     gap: 40px;
 }
-.form__button-submit {
+.form__button--submit {
     padding: 10px;
     width: 150px;
     height: 50px;
@@ -76,7 +76,7 @@
     cursor: pointer;
     transition: opacity 0.3s;
 }
-.form__button-fix {
+.form__button--modify {
     padding: 10px;
     width: 150px;
     height: 50px;
@@ -87,8 +87,8 @@
     cursor: pointer;
     text-decoration: underline;
 }
-.form__button-submit:hover,
-.form__button-fix:hover {
+.form__button--submit:hover,
+.form__button--modify:hover {
     opacity: 0.7;
 }
 .confirm-table__row:last-child {
