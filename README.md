@@ -23,7 +23,7 @@
 ### **環境変数の設定**
 
     .env.example をコピーして .env を作成し、アプリケーションキーを生成します。
-    ```cp .env.example .env```
+    ```cp sec/.env.example src/.env```
     ```docker-compose exec php php artisan key:generate```
 
         ※ 注意: 使用する環境（Docker等）に合わせて、.env 内の DB_HOST,
